@@ -14,7 +14,7 @@ def btc_vol_ch_24h(update: Update, context: CallbackContext):
     update.message.reply_text(f'{vol_ch_24h}')
   
 def btc_per_ch_30d(update: Update, context: CallbackContext):
-    update.message.reply_text(f'{per_ch_30d}')
+    update.message.reply_text(f'{per_ch_30d}%')
   
 def btc_market_cap(update: Update, context: CallbackContext):
     update.message.reply_text(f'₹{market_cap}')
