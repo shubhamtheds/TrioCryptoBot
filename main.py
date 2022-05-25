@@ -3,7 +3,9 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 from lib.app import *
   
-
+def get_help(update: Update, context: CallbackContext):
+    update.message.reply_text("/btc_price, /btc_vol_ch_24h, /btc_per_ch_30d, /btc_market_cap, /eth_price, /eth_vol_ch_24h, /eth_per_ch_30d, /eth_market_cap, /usdt_price, /usdt_vol_ch_24h, /usdt_per_ch_30d, /usdt_market_cap, /usdc_price, /usdc_vol_ch_24h, /usdc_per_ch_30d, /usdc_market_cap, /bnb_price, /bnb_vol_ch_24h, /bnb_per_ch_30d, /bnb_market_cap")
+                              
 def get_btc_price(update: Update, context: CallbackContext):
     update.message.reply_text(f'₹{btc_price}')
 
@@ -95,6 +97,7 @@ updater.dispatcher.add_handler(CommandHandler('bnb_vol_ch_24h', get_bnb_vol_ch_2
 updater.dispatcher.add_handler(CommandHandler('bnb_per_ch_30d', get_bnb_per_ch_30d))
 updater.dispatcher.add_handler(CommandHandler('bnb_market_cap', get_bnb_market_cap))
 
+updater.dispatcher.add_handler(CommandHandler('help', get_help))
 
 updater.start_polling()
 updater.idle()
