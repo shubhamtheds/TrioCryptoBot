@@ -7,7 +7,7 @@ import json
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
   'start' : '1',
-  'limit' : '5',
+  'limit' : '6',
   'convert':'INR'
 }
 headers = {
@@ -21,7 +21,7 @@ session.headers.update(headers)
 try:
   response = session.get(url, params=parameters)
   data = json.loads(response.text)
-
+  print(data)
   #BTC DATA
   btc_data_inr = data['data'][0]['quote']['INR']
   
@@ -33,6 +33,8 @@ try:
   
   btc_market_cap = btc_data_inr['market_cap']
 
+
+  #ETH DATA
   eth_price = data['data'][1]['quote']['INR']['price']
   
   eth_vol_ch_24h = data['data'][1]['quote']['INR']['volume_change_24h']
@@ -41,6 +43,8 @@ try:
   
   eth_market_cap = data['data'][1]['quote']['INR']['market_cap']
 
+
+  #USDT DATA
   usdt_price = data['data'][2]['quote']['INR']['price']
   
   usdt_vol_ch_24h = data['data'][2]['quote']['INR']['volume_change_24h']
@@ -49,6 +53,8 @@ try:
   
   usdt_market_cap = data['data'][2]['quote']['INR']['market_cap']
 
+
+  #USDC DATA
   usdc_price = data['data'][3]['quote']['INR']['price']
   
   usdc_vol_ch_24h = data['data'][3]['quote']['INR']['volume_change_24h']
@@ -57,6 +63,8 @@ try:
   
   usdc_market_cap = data['data'][3]['quote']['INR']['market_cap'] 
 
+
+  #BNB DATA
   bnb_price = data['data'][4]['quote']['INR']['price']
   
   bnb_vol_ch_24h = data['data'][4]['quote']['INR']['volume_change_24h']
@@ -64,6 +72,18 @@ try:
   bnb_per_ch_30d = data['data'][4]['quote']['INR'] ['percent_change_30d']
   
   bnb_market_cap = data['data'][4]['quote']['INR']['market_cap']
+
+
+  #XRP DATA
+  xrp_price = data['data'][5]['quote']['INR']['price']
+  
+  xrp_vol_ch_24h = data['data'][5]['quote']['INR']['volume_change_24h']
+  
+  xrp_per_ch_30d = data['data'][5]['quote']['INR'] ['percent_change_30d']
+  
+  xrp_market_cap = data['data'][5]['quote']['INR']['market_cap']
+
+
 
 
 except (ConnectionError, Timeout, TooManyRedirects) as e:
