@@ -1,10 +1,10 @@
 # TrioCryptoBot
-Now BTC segment includes following features:
+Now our Bot supports BTC, ETH, USDC, USDT, BNB, XRP crypto currencies. Each currency includes following attributes:
 
-A. latest price(₹) - /btc_price
+A. latest price(₹)
 
-B. volume change within 24 hours - /btc_vol_ch_24h
+B. volume change within 24 hours
 
-C. percentage change in 30 days price - /btc_per_ch_30d
+C. percentage change in 30 days price
 
-D. market capitalization(₹) - /btc_market_cap
+D. market capitalization(₹)
