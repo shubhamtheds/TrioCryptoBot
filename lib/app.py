@@ -7,7 +7,7 @@ import json
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
   'start' : '1',
-  'limit' : '6',
+  'limit' : '7',
   'convert':'INR'
 }
 headers = {
@@ -83,6 +83,15 @@ try:
   
   xrp_market_cap = data['data'][5]['quote']['INR']['market_cap']
 
+
+  #BUSD DATA
+  busd_price = data['data'][6]['quote']['INR']['price']
+  
+  busd_vol_ch_24h = data['data'][6]['quote']['INR']['volume_change_24h']
+  
+  busd_per_ch_30d = data['data'][6]['quote']['INR'] ['percent_change_30d']
+  
+  busd_market_cap = data['data'][6]['quote']['INR']['market_cap']  
 
 
 
