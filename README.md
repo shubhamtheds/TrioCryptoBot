@@ -1,5 +1,5 @@
 # TrioCryptoBot
-Now our Bot supports BTC, ETH, USDC, USDT, BNB, XRP crypto currencies. Each currency includes following attributes:
+Now our Bot supports BTC, ETH, USDC, USDT, BNB, XRP, BUSD crypto currencies. Each currency includes following attributes:
 
 A. latest price(₹)
 
