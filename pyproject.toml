@@ -6,7 +6,6 @@ authors = ["melissaji1998 <<>>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-telegram = "^0.0.1"
 pandas = "^1.4.2"
 
 [tool.poetry.dev-dependencies]

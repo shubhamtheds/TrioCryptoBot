@@ -21,7 +21,6 @@ session.headers.update(headers)
 try:
   response = session.get(url, params=parameters)
   data = json.loads(response.text)
-  print(data)
   #BTC DATA
   btc_data_inr = data['data'][0]['quote']['INR']
   
