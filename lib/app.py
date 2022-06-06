@@ -34,63 +34,69 @@ try:
 
 
   #ETH DATA
-  eth_price = data['data'][1]['quote']['INR']['price']
+  eth_data_inr = data['data'][1]['quote']['INR']
+  eth_price = eth_data_inr['price']
   
-  eth_vol_ch_24h = data['data'][1]['quote']['INR']['volume_change_24h']
+  eth_vol_ch_24h = eth_data_inr['volume_change_24h']
   
-  eth_per_ch_30d = data['data'][1]['quote']['INR'] ['percent_change_30d']
+  eth_per_ch_30d = eth_data_inr ['percent_change_30d']
   
-  eth_market_cap = data['data'][1]['quote']['INR']['market_cap']
+  eth_market_cap = eth_data_inr['market_cap']
 
 
   #USDT DATA
-  usdt_price = data['data'][2]['quote']['INR']['price']
+  usdt_data_inr = data['data'][2]['quote']['INR']
+  usdt_price = usdt_data_inr['price']
   
-  usdt_vol_ch_24h = data['data'][2]['quote']['INR']['volume_change_24h']
+  usdt_vol_ch_24h = usdt_data_inr['volume_change_24h']
   
-  usdt_per_ch_30d = data['data'][2]['quote']['INR'] ['percent_change_30d']
+  usdt_per_ch_30d = usdt_data_inr ['percent_change_30d']
   
-  usdt_market_cap = data['data'][2]['quote']['INR']['market_cap']
+  usdt_market_cap = usdt_data_inr['market_cap']
 
 
   #USDC DATA
-  usdc_price = data['data'][3]['quote']['INR']['price']
+  usdc_price_inr = data['data'][3]['quote']['INR']
+  usdc_price = usdc_price_inr['price']
   
-  usdc_vol_ch_24h = data['data'][3]['quote']['INR']['volume_change_24h']
+  usdc_vol_ch_24h = usdc_price_inr['volume_change_24h']
   
-  usdc_per_ch_30d = data['data'][3]['quote']['INR'] ['percent_change_30d']
+  usdc_per_ch_30d = usdc_price_inr['percent_change_30d']
   
-  usdc_market_cap = data['data'][3]['quote']['INR']['market_cap'] 
+  usdc_market_cap = usdc_price_inr['market_cap'] 
 
 
   #BNB DATA
-  bnb_price = data['data'][4]['quote']['INR']['price']
+  bnb_price_inr = data['data'][4]['quote']['INR']
+  bnb_price = bnb_price_inr['price']
   
-  bnb_vol_ch_24h = data['data'][4]['quote']['INR']['volume_change_24h']
+  bnb_vol_ch_24h = bnb_price_inr['volume_change_24h']
   
-  bnb_per_ch_30d = data['data'][4]['quote']['INR'] ['percent_change_30d']
+  bnb_per_ch_30d = bnb_price_inr['percent_change_30d']
   
-  bnb_market_cap = data['data'][4]['quote']['INR']['market_cap']
+  bnb_market_cap = bnb_price_inr['market_cap']
 
 
   #XRP DATA
-  xrp_price = data['data'][5]['quote']['INR']['price']
+  xrp_price_inr = data['data'][5]['quote']['INR']
+  xrp_price = xrp_price_inr['price']
   
-  xrp_vol_ch_24h = data['data'][5]['quote']['INR']['volume_change_24h']
+  xrp_vol_ch_24h = xrp_price_inr['volume_change_24h']
   
-  xrp_per_ch_30d = data['data'][5]['quote']['INR'] ['percent_change_30d']
+  xrp_per_ch_30d = xrp_price_inr ['percent_change_30d']
   
-  xrp_market_cap = data['data'][5]['quote']['INR']['market_cap']
+  xrp_market_cap = xrp_price_inr['market_cap']
 
 
   #BUSD DATA
-  busd_price = data['data'][6]['quote']['INR']['price']
+  busd_price_inr = data['data'][6]['quote']['INR']
+  busd_price = busd_price_inr['price']
   
-  busd_vol_ch_24h = data['data'][6]['quote']['INR']['volume_change_24h']
+  busd_vol_ch_24h = busd_price_inr['volume_change_24h']
   
-  busd_per_ch_30d = data['data'][6]['quote']['INR'] ['percent_change_30d']
+  busd_per_ch_30d = busd_price_inr['percent_change_30d']
   
-  busd_market_cap = data['data'][6]['quote']['INR']['market_cap']  
+  busd_market_cap = busd_price_inr['market_cap']  
 
 
 
