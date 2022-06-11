@@ -98,6 +98,17 @@ try:
   
   busd_market_cap = busd_price_inr['market_cap']  
 
+  #SOL DATA
+  sol_data_inr = data['data'][8]['quote']['INR']
+  
+  sol_price = sol_data_inr['price']
+  
+  sol_vol_ch_24h = sol_data_inr['volume_change_24h']
+  
+  sol_per_ch_30d = sol_data_inr['percent_change_30d']
+  
+  sol_market_cap = sol_data_inr['market_cap']  
+
 
 
 except (ConnectionError, Timeout, TooManyRedirects) as e:

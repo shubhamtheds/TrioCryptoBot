@@ -4,7 +4,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 from lib.app import *
   
 def get_help(update: Update, context: CallbackContext):
-    update.message.reply_text("/btc_price, /btc_vol_ch_24h, /btc_per_ch_30d, /btc_market_cap, /eth_price, /eth_vol_ch_24h, /eth_per_ch_30d, /eth_market_cap, /usdt_price, /usdt_vol_ch_24h, /usdt_per_ch_30d, /usdt_market_cap, /usdc_price, /usdc_vol_ch_24h, /usdc_per_ch_30d, /usdc_market_cap, /bnb_price, /bnb_vol_ch_24h, /bnb_per_ch_30d, /bnb_market_cap, /xrp_price, /xrp_vol_ch_24h, /xrp_per_ch_30d, /xrp_market_cap, /busd_price, /busd_vol_ch_24h, /busd_per_ch_30d, /busd_market_cap")
+    update.message.reply_text("/btc_price, /btc_vol_ch_24h, /btc_per_ch_30d, /btc_market_cap, /eth_price, /eth_vol_ch_24h, /eth_per_ch_30d, /eth_market_cap, /usdt_price, /usdt_vol_ch_24h, /usdt_per_ch_30d, /usdt_market_cap, /usdc_price, /usdc_vol_ch_24h, /usdc_per_ch_30d, /usdc_market_cap, /bnb_price, /bnb_vol_ch_24h, /bnb_per_ch_30d, /bnb_market_cap, /xrp_price, /xrp_vol_ch_24h, /xrp_per_ch_30d, /xrp_market_cap, /busd_price, /busd_vol_ch_24h, /busd_per_ch_30d, /busd_market_cap,/sol_price, /sol_vol_ch_24h, /sol_per_ch_30d, /sol_market_cap")
                               
 def get_btc_price(update: Update, context: CallbackContext):
     update.message.reply_text(f'₹{btc_price}')
@@ -90,6 +90,18 @@ def get_busd_per_ch_30d(update: Update, context: CallbackContext):
 def get_busd_market_cap(update: Update, context: CallbackContext):
     update.message.reply_text(f'₹{busd_market_cap}')
 
+def get_sol_price(update: Update, context: CallbackContext):
+    update.message.reply_text(f'₹{sol_price}')
+
+def get_sol_vol_ch_24h(update: Update, context: CallbackContext):
+    update.message.reply_text(f'{sol_vol_ch_24h}%')
+  
+def get_sol_per_ch_30d(update: Update, context: CallbackContext):
+    update.message.reply_text(f'{sol_per_ch_30d}%')
+  
+def get_sol_market_cap(update: Update, context: CallbackContext):
+    update.message.reply_text(f'₹{sol_market_cap}')
+
 
 
   
@@ -132,6 +144,11 @@ updater.dispatcher.add_handler(CommandHandler('busd_price', get_busd_price))
 updater.dispatcher.add_handler(CommandHandler('busd_vol_ch_24h', get_busd_vol_ch_24h))
 updater.dispatcher.add_handler(CommandHandler('busd_per_ch_30d', get_busd_per_ch_30d))
 updater.dispatcher.add_handler(CommandHandler('busd_market_cap', get_busd_market_cap))
+
+updater.dispatcher.add_handler(CommandHandler('sol_price', get_sol_price))
+updater.dispatcher.add_handler(CommandHandler('sol_vol_ch_24h', get_sol_vol_ch_24h))
+updater.dispatcher.add_handler(CommandHandler('sol_per_ch_30d', get_sol_per_ch_30d))
+updater.dispatcher.add_handler(CommandHandler('sol_market_cap', get_sol_market_cap))
 
 updater.dispatcher.add_handler(CommandHandler('help', get_help))
 
